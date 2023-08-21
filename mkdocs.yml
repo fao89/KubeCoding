@@ -1,0 +1,44 @@
+site_name: KubeCoding
+site_description: Um guia para estender a API do kubernetes
+site_author: Fabricio Aguiar
+site_url: https://fao89.github.io/KubeCoding
+repo_name: fao89/KubeCoding
+repo_url: https://github.com/fao89/KubeCoding
+theme:
+  features:
+    - search.suggest
+    - search.highlight
+    - search.share
+  name: material
+  logo: images/operator.png
+  palette:
+    - scheme: default
+      media: "(prefers-color-scheme: light)"
+      primary: teal
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      media: "(prefers-color-scheme: dark)"
+      primary: teal
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+nav:
+  - Home: index.md
+markdown_extensions:
+  - toc:
+      permalink: "#"
+  - pymdownx.superfences
+  - admonition
+extra:
+  version:
+    provider: mike
+    default: latest
+plugins:
+  - git-revision-date
+  - build_plantuml:
+      diagram_root: "docs/diagrams"
+      output_format: "svg"
+  - search:
+      lang: en
